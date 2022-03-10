@@ -12,7 +12,7 @@ function solution(a: number[], b: number[]): string[] {
 }
 
 function solution2(a: number[], b: number[]): string[] {
-    let answer = [];
+    let answer: string[] = [];
     for (let i = 0; i < a.length; i++) {
         if (a[i] === b[i]) {
             answer.push('D');
@@ -24,6 +24,7 @@ function solution2(a: number[], b: number[]): string[] {
     }
     return answer;
 }
+
 const a = [2, 3, 3, 1, 3];
 const b = [1, 1, 2, 2, 3];
 console.log(solution2(a, b));
