@@ -1,9 +1,10 @@
-function solution(s: string) {
+function solution(s: any) {
   let answer;
   let stack: any[] = [];
   for (let x of s) {
-    if (!isNaN(Number(x))) stack.push(Number(x));
-    else {
+    if (!isNaN(x)) {
+      stack.push(Number(x));
+    } else {
       let rt = stack.pop();
       let lt = stack.pop();
       if (x === "+") stack.push(lt + rt);
